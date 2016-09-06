@@ -1,0 +1,16 @@
+{
+  "name": "minimalist-components",
+  "version": "0.0.1",
+  "description": "A lot of components ui, with a design minimalist",
+  "main": [
+    "dist/minimalist-components.css",
+    "dist/minimalist-components.scss",
+    "dist/minimalist-components.js",
+  ],
+  "authors": [
+    "Darlan Mendonça <darlanmendonca@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "dependencies": {}
+}
