@@ -1,11 +1,11 @@
 {
-  "name": "minimalist-components",
+  "name": "mn-components",
   "version": "0.0.1",
   "description": "A lot of components ui, with a design minimalist",
   "main": [
-    "dist/minimalist-components.css",
-    "dist/minimalist-components.scss",
-    "dist/minimalist-components.js",
+    "dist/mn-components.css",
+    "dist/mn-components.scss",
+    "dist/mn-components.js",
   ],
   "authors": [
     "Darlan Mendonça <darlanmendonca@gmail.com>"
