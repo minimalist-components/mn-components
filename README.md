@@ -6,6 +6,8 @@ The components can be used separated from this module, i.e, you can use just a b
 
 At moment, we want include in mn-components:
 
+
+- [mn-image](https://github.com/minimalist-components/mn-image)
 - [mn-input](https://github.com/minimalist-components/mn-input) (just text, email or password)
 - [mn-button](https://github.com/minimalist-components/mn-button)
 - [mn-number](https://github.com/minimalist-components/mn-number)
