@@ -77,3 +77,26 @@ import customElements from 'document-register-element';
 // the second argument is the name of class to use to custom element, in example below, MnImage
 customElements.define('mn-image', MnImage);
 ```
+
+
+### Tools
+
+Finally, if you want run locallly and check in realtime your changes, just clone the module, and run with Gulp.
+Gulp will run a lot of tasks like tranpile es6 code to es5, lint script, compile sass styles, etc. And obviously serve a page with preview in localhost:3000. So
+
+```sh
+# clone the project
+git clone https://github.com/minimalist-components/mn-MODULE_NAME
+```
+
+then install dependencies
+
+```sh
+npm install
+```
+
+and run with gulp `default` task
+
+```sh
+gulp
+```
