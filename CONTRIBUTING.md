@@ -11,7 +11,7 @@ Each component must have (or be):
 - Focused on UX
 - A great performance (we like it small :D)
 
-Finally, technically speaking, our components are compound that way:
+Finally, technically speaking, our components are composed following those rules.
 
 ### Custom tags
 
