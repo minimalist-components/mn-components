@@ -1,34 +1,47 @@
 # Contribution Guidelines
 
-Did you like this our components and want to contribute? We'd love your help!
+Did you like this components and want to contribute? We'd love your help!
 
-Our purpose is made UI components to responsive interfaces, following a minimalist design.
+Our purpose is to make UI components which play well with responsive interfaces, following a minimalist design.
 
-Each component need be/have
+Each component must have (or be):
 
-- agnostic to framework (pure javascript, then porting to any frameworks, but always using as core the pure javascript module)
-- mobile first (help to be minimalist, and responsive)
-- focus on UX
-- great performance (we love few bytes)
+- Agnostic to framework (Always use pure javascript as core, then you can port it to any framework)
+- Mobile first (Minimalist and responsive)
+- Focused on UX
+- A great performance (we like it small :D)
 
-Finally, technically speaking, our components are compound that way:
+Finally, technically speaking, our components are composed following those rules.
 
 ### Custom tags
-We prefer custom tags to keep html clean. We like all layers clean. So this
+
+We prefer custom tags in order to keep a clean HTML code. So, keep in mind that this:
 
 ```pug
 mn-image(src='/path/to/image.jpg')
 ```
 
-It is more readable than
+Which compiles to:
+
+```html
+<mn-image src="/path/to/image.jpg">
+```
+
+Is better than this:
 
 ```pug
 img.mn-image(src='/path/to/image.jpg')
 ```
 
-And not only to make a readable and clean code in html, this allow us to improve and release new versions of our component, without break old versions, when the markup change abruptly.
+Which compiles to:
 
-In the shadows, this above example, create a markup like this in runtime:
+```html
+<img class="mn-image" src="/path/to/image.jpg">
+```
+
+Not onlye this will make your code more easily readable and clean to us and others, but also allows us to improve and release new versions of your code without breaking old versions, this means, when the markup changes abruptly.
+
+Behind the curtains, this example above will create a markup like this during runtime:
 
 ```pug
 mn-image(src='/path/to/image.jpg')
@@ -36,7 +49,7 @@ mn-image(src='/path/to/image.jpg')
     img(src='/path/to/image.jpg')
 ```
 
-If tomorrow we want add more elements inside mn-image, our custom tag know how do it. Because, behinde of each custom tag, we have a javascript class.
+If later we try to add more elements inside `mn-image`, our custom tag know how to do it, because behind each custom tag, we have a javascript class.
 
 To create this tag using javascript, you can do:
 
@@ -49,24 +62,24 @@ document.querySelector('body').appendChild(mnImage);
 
 ### Javascript Class
 
-The logic of each component is built in inside a javascript class. This allow to us, a clean code to define what our custom component do. We can do things when the tag is appended to html, or when component is instanciated from javascript. We can too know when a attribute is changed, or know when the component is removed, etc.
+The logic of each component is built within a javascript class. This allows us to create and develop a cleaner code to define what will our custom component do. We can also do things when the tag is appended to html, or when the component is instanciated from another javascript code. It is also possible to know when an attribute is changed, or when the component is removed, etc.
 
-A example of class is below:
+An example of class below:
 
 ```js
 class MnImage extends HTMLElement {
   constructor() {
-      // here what you want do when element was instantiated via html or javascript
+      // here goes what you want to do when the element is instantiated via html or javascript
   }
 
-  // more methods, be things what you can do, example
+  // more methods, things that you can do, example
   setImage() {
-        // a method to set image inside this component, using attributes defined in component
+        // a method to set the image inside this component, using attributes defined in the component
   }
 }
 ```
 
-Finally to register our class to an tag, we use the module [document-register-element](https://github.com/WebReflection/document-register-element), they add cross-browser support to method .registerElement() from HTML5.
+Finally to register our class to a tag, we use the module [document-register-element](https://github.com/WebReflection/document-register-element), they add cross-browser support to method .registerElement() from HTML5.
 
 The code to set a custom tag with a custom class is:
 
@@ -81,21 +94,22 @@ customElements.define('mn-image', MnImage);
 
 ### Tools
 
-Finally, if you want run locallly and check in realtime your changes, just clone the module, and run with Gulp.
-Gulp will run a lot of tasks like tranpile es6 code to es5, lint script, compile sass styles, etc. And obviously serve a page with preview in localhost:3000. So
+Finally, if you want to run locallly and check your changes in realtime, just clone the module and run with Gulp.
+
+Gulp is going to run a lot of tasks like transpile es6 code to es5, linting, compile sass styles, and so on... And in the end it will serve a page with the component preview in localhost:3000.
 
 ```sh
 # clone the project
 git clone https://github.com/minimalist-components/mn-MODULE_NAME
 ```
 
-then install dependencies
+Then install dependencies
 
 ```sh
 npm install
 ```
 
-and run with gulp `default` task
+And run with gulp `default` task
 
 ```sh
 gulp
