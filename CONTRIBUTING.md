@@ -39,7 +39,7 @@ Which compiles to:
 <img class="mn-image" src="/path/to/image.jpg">
 ```
 
-Not onlye this will make your code more easily readable and clean to us and others, but also allows us to improve and release new versions of your code without breaking old versions, this means, when the markup changes abruptly.
+Not only this will make your code more easily readable and clean to us and others, but also allows us to improve and release new versions of your code without breaking old versions, this means, when the markup changes abruptly.
 
 Behind the curtains, this example above will create a markup like this during runtime:
 
