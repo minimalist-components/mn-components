@@ -7,13 +7,15 @@ The components can be used separated from this module, i.e, you can use just a b
 At moment, we want include in mn-components:
 
 
+- [mn-layout](https://github.com/minimalist-components/mn-layout)
+- [mn-button](https://github.com/minimalist-components/mn-button)
 - [mn-image](https://github.com/minimalist-components/mn-image)
 - [mn-input](https://github.com/minimalist-components/mn-input) (just text, email or password)
-- [mn-button](https://github.com/minimalist-components/mn-button)
 - [mn-number](https://github.com/minimalist-components/mn-number)
-- [mn-checkbox](https://github.com/minimalist-components/mn-checkbox)
 - [mn-textarea](https://github.com/minimalist-components/mn-textarea)
 - [mn-checkbox](https://github.com/minimalist-components/mn-checkbox)
+- [mn-radio](https://github.com/minimalist-components/mn-radio)
+- [mn-table-list](https://github.com/minimalist-components/mn-table-list)
 - [mn-dialog](https://github.com/minimalist-components/mn-dialog)
 - [mn-snap-list](https://github.com/minimalist-components/mn-snap-list)
 
