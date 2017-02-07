@@ -103,14 +103,21 @@ Gulp is going to run a lot of tasks like transpile es6 code to es5, linting, com
 git clone https://github.com/minimalist-components/mn-MODULE_NAME
 ```
 
-Then install dependencies
+Then
 
 ```sh
+# install dependencies
 npm install
 ```
 
-And run with gulp `default` task
+```sh
+# concat dependencies, in vendor.js and vendor.css
+npm run bundle
+```
 
 ```sh
-gulp
+# start a local server, and watch changes in files
+npm start
 ```
+
+finally, access in browser localhost:3000/demo.html
